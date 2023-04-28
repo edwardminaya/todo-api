@@ -1,7 +1,45 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# 11 TODOS SAMPLE DATA
+todo = Todo.create(
+  title: "Clean Kitchen",
+  done: false,
+)
+todo = Todo.create(
+  title: "Clean Bathroom",
+  done: false,
+)
+todo = Todo.create(
+  title: "Grocery Shop",
+  done: false,
+)
+todo = Todo.create(
+  title: "Give Dog a Bath",
+  done: false,
+)
+todo = Todo.create(
+  title: "Book Trip to Cabo",
+  done: false,
+)
+todo = Todo.create(
+  title: "Make Doctor Appointment",
+  done: false,
+)
+todo = Todo.create(
+  title: "Buy Flowers",
+  done: false,
+)
+todo = Todo.create(
+  title: "Venmo Friend For Concert Tickets",
+  done: false,
+)
+todo = Todo.create(
+  title: "Update Resume",
+  done: false,
+)
+todo = Todo.create(
+  title: "Take Your Vitamins",
+  done: false,
+)
+todo = Todo.create(
+  title: "Buy Socks",
+  done: false,
+)
