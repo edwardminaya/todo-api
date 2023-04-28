@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   patch "todos/:id" => "todos#update"
   delete "todos/:id" => "todos#destroy"
 
-  # USERS
+  # USERS SIGN UP
   post "/users" => "users#create"
+  # USER LGOIN
+  post "/sessions" => "sessions#create"
 end

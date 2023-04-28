@@ -8,6 +8,7 @@ class TodosController < ApplicationController
     @todo = Todo.create(
       title: params[:title],
       done: false,
+      user_id: current_user.id,
     )
     render :show
   end

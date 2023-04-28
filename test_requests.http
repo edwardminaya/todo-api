@@ -1,9 +1,12 @@
+### Add jwt to login and remove jwt to logout
+@jwt = 
+
 ###TODO INDEX
 GET http://localhost:3000/todos.json
 
-
 ###TODO CREATE
 POST http://localhost:3000/todos.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -15,6 +18,7 @@ GET http://localhost:3000/todos/1.json
 
 ###TODO UPDATE
 PATCH http://localhost:3000/todos/1.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -23,6 +27,7 @@ Content-Type: application/json
 
 ###TODO DELETE
 DELETE http://localhost:3000/todos/10.json
+Authorization: Bearer {{jwt}}
 
 ###USERS CREATE
 POST http://localhost:3000/users.json
@@ -33,4 +38,13 @@ Content-Type: application/json
   "email": "test1@test.com",
   "password": "password", 
   "password_confirmatoin": "password"
+}
+
+###USER LOGIN
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test1@test.com",
+  "password": "password"
 }

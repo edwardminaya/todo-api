@@ -30,8 +30,8 @@ This will start a server on your machine. Go to your browser (I use google chrom
 - Allow users to create a task (complete)
 - Allow users to see an individual tasks (complete)
 - Allow users to update a task (complete)
-- Allow users to sign up
-- Allow users to login
+- Allow users to sign up (complete)
+- Allow users to login (complete)
 
 # Future Features
 
