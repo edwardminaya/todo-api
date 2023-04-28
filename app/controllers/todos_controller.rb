@@ -25,4 +25,10 @@ class TodosController < ApplicationController
     )
     render :show
   end
+
+  def destroy
+    @todo = Todo.find_by(id: params[:id])
+    @todo.destroy
+    render json: { message: "task destroyed successfully" }
+  end
 end
