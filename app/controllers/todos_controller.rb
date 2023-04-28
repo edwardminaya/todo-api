@@ -3,4 +3,12 @@ class TodosController < ApplicationController
     @todos = Todo.all
     render :index
   end
+
+  def create
+    @todo = Todo.create(
+      title: params[:title],
+      done: false,
+    )
+    render :show
+  end
 end
