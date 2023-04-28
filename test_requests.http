@@ -12,3 +12,11 @@ Content-Type: application/json
 
 ###TODO SHOW
 GET http://localhost:3000/todos/1.json
+
+###TODO UPDATE
+PATCH http://localhost:3000/todos/1.json
+Content-Type: application/json
+
+{
+  "done": true
+}
