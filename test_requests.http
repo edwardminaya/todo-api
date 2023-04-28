@@ -23,3 +23,14 @@ Content-Type: application/json
 
 ###TODO DELETE
 DELETE http://localhost:3000/todos/10.json
+
+###USERS CREATE
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "test1", 
+  "email": "test1@test.com",
+  "password": "password", 
+  "password_confirmatoin": "password"
+}
