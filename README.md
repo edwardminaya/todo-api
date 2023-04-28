@@ -19,7 +19,7 @@ These commands will create the database. A seeds file will have a sample data se
 To see the data in your browser run the following command in your terminal
 
 ```
-rails s
+rails server
 ```
 
 This will start a server on your machine. Go to your browser (I use google chrome) and go to the this url, http://localhost:3000/todos.json You will be able to see the json data. Ensure to use a JSON viewer extension on your browser.
