@@ -9,3 +9,6 @@ Content-Type: application/json
 {
   "title": "todo test"
 }
+
+###TODO SHOW
+GET http://localhost:3000/todos/1.json
