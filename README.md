@@ -1,4 +1,4 @@
-# To Do Application
+# To Do Application - Backend RUBY ON RAILS
 
 This is a Todo API using Ruby on Rails. The goal is to create the backend that has the CRUD actions for users.
 
