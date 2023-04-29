@@ -1,6 +1,17 @@
 require "test_helper"
 
 class TodosControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    @user = User.create(
+      name: "Test",
+      email: "test@test.com",
+      password: "password",
+    )
+    post "/sessions.json", params: { email: "test@test.com", password: "password" }
+    data = JSON.parse(response.body)
+    @jwt = data["jwt"]
+  end
+
   test "index" do
     get "/todos.json"
     assert_response 200
@@ -11,7 +22,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Todo.count", 1 do
-      post "/todos.json", params: { title: "test http" }
+      post "/todos.json", params: { title: "test http" }, headers: { "Authorization" => "Bearer #{@jwt}" }
       assert_response 200
     end
   end

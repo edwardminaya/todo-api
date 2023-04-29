@@ -6,11 +6,12 @@ class TodosController < ApplicationController
 
   def create
     if current_user
-      @todo = Todo.new(
+      @todo = Todo.create(
         title: params[:title],
         done: false,
         user_id: current_user.id,
       )
+      render :show
     else
       render json: { message: "Must be logged in to create task" }
     end

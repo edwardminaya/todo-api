@@ -1,5 +1,5 @@
 ### Add jwt to login and remove jwt to logout
-@jwt = 
+@jwt =eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODI4MTI4MzV9.xh_7A7zDDSucw9saEjJ9YtRqRB6pv9qA0hmColgdygk
 
 ###TODO INDEX
 GET http://localhost:3000/todos.json
