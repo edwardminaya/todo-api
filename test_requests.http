@@ -1,4 +1,24 @@
-### Add jwt to login and remove jwt to logout
+###USERS CREATE
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "test1", 
+  "email": "test1@test.com",
+  "password": "password", 
+  "password_confirmatoin": "password"
+}
+
+###USER LOGIN ADD JWT IN RESPONSE TO VARIABLE BELOW
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test1@test.com",
+  "password": "password"
+}
+
+### ADD JWT BELOW TO LOGIN. TO LOGOUT REMOVE JWT TOKEN
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM2NjQxNTV9.r3LmYf8SySW5e8cM8eV-siHLFfEjBCFMc8sUgMl8FNM
 
 ###LIST INDEX
@@ -45,23 +65,3 @@ Content-Type: application/json
 ###TODO DELETE
 DELETE http://localhost:3000/todos/9.json
 Authorization: Bearer {{jwt}}
-
-###USERS CREATE
-POST http://localhost:3000/users.json
-Content-Type: application/json
-
-{
-  "name": "test1", 
-  "email": "test1@test.com",
-  "password": "password", 
-  "password_confirmatoin": "password"
-}
-
-###USER LOGIN
-POST http://localhost:3000/sessions.json
-Content-Type: application/json
-
-{
-  "email": "test1@test.com",
-  "password": "password"
-}
