@@ -1,7 +1,11 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.order("created_at DESC")
-    render :index
+    if current_user
+      @todos = Todo.where(user_id: current_user.id)
+      render :index
+    else
+      render json: { message: "Must be logged in to see tasks" }
+    end
   end
 
   def create
