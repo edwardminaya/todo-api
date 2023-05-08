@@ -12,7 +12,25 @@ user = User.create(
   password_confirmation: "password",
 )
 
-# 10 TODOS SAMPLE DATA
+# 4 LISTS SAMPLE DATA
+list = List.create(
+  list_name: "Chores",
+  user_id: 1,
+)
+list = List.create(
+  list_name: "Vacation Trip",
+  user_id: 1,
+)
+list = List.create(
+  list_name: "Job Search",
+  user_id: 2,
+)
+list = List.create(
+  list_name: "Capstone Project",
+  user_id: 2,
+)
+
+# 8 TODOS SAMPLE DATA
 todo = Todo.create(
   title: "Clean Kitchen",
   done: false,
@@ -30,20 +48,12 @@ todo = Todo.create(
   list_id: 1,
 )
 todo = Todo.create(
-  title: "Grocery Shop",
+  title: "Passport",
   done: false,
   user_id: 1,
-  details: "Get ingredients for dinner party",
+  details: "Submit passport application with pictures",
   due_date: "",
-  list_id: 1,
-)
-todo = Todo.create(
-  title: "Give Dog a Bath",
-  done: false,
-  user_id: 1,
-  details: "",
-  due_date: "",
-  list_id: 1,
+  list_id: 2,
 )
 todo = Todo.create(
   title: "Book Trip to Cabo",
@@ -51,45 +61,37 @@ todo = Todo.create(
   user_id: 1,
   details: "Find direct flights and airbnb",
   due_date: "",
-  list_id: 1,
-)
-todo = Todo.create(
-  title: "Make Doctor Appointment",
-  done: false,
-  user_id: 2,
-  details: "Annual physical",
-  due_date: "",
-  list_id: 2,
-)
-todo = Todo.create(
-  title: "Buy Flowers",
-  done: false,
-  user_id: 2,
-  details: "2 year anniverary",
-  due_date: "",
-  list_id: 2,
-)
-todo = Todo.create(
-  title: "Venmo Friend For Concert Tickets",
-  done: false,
-  user_id: 2,
-  details: "$70 bucks for tickets",
-  due_date: "",
   list_id: 2,
 )
 todo = Todo.create(
   title: "Update Resume",
   done: false,
   user_id: 2,
-  details: "add capstone project",
+  details: "Add capstone to projects section",
   due_date: "",
-  list_id: 2,
+  list_id: 3,
 )
 todo = Todo.create(
-  title: "Buy Socks",
+  title: "Network with Friend",
   done: false,
   user_id: 2,
-  details: "",
+  details: "Set up meeting and prep questions",
   due_date: "",
-  list_id: 2,
+  list_id: 3,
+)
+todo = Todo.create(
+  title: "Create Backend",
+  done: false,
+  user_id: 2,
+  details: "Use Ruby on Rails",
+  due_date: "",
+  list_id: 4,
+)
+todo = Todo.create(
+  title: "Create Frontend",
+  done: false,
+  user_id: 2,
+  details: "Use React",
+  due_date: "",
+  list_id: 4,
 )
