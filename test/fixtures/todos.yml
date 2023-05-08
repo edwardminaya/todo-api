@@ -3,7 +3,13 @@
 one:
   title: MyString
   done: false
+  details: Mystring
+  due_date: Mystring
+  list_id: 1
 
 two:
   title: MyString
   done: false
+  details: Mystring
+  due_date: Mystring
+  list_id: 1

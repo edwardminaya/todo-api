@@ -19,7 +19,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Todo.count", 1 do
-      post "/todos.json", params: { title: "test http" }, headers: { "Authorization" => "Bearer #{@jwt}" }
+      post "/todos.json", params: { title: "test http", details: "test details", due_date: "test", list_id: 1 }, headers: { "Authorization" => "Bearer #{@jwt}" }
       assert_response 200
     end
   end

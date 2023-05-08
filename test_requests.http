@@ -1,9 +1,18 @@
 ### Add jwt to login and remove jwt to logout
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM2NTgwMjV9.kNgJ3jqZX4uLz_d8wYeyLXmEn9MzfyXNJk2pyPcudqs
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM2NjQxNTV9.r3LmYf8SySW5e8cM8eV-siHLFfEjBCFMc8sUgMl8FNM
 
 ###LIST INDEX
 GET http://localhost:3000/lists.json
 Authorization: Bearer {{jwt}}
+
+###LIST CREATE
+POST http://localhost:3000/lists.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "list_name": "test list"
+}
 
 ###TODO INDEX
 GET http://localhost:3000/todos.json

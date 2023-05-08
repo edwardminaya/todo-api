@@ -22,7 +22,7 @@ To see the data in your browser run the following command in your terminal
 rails server
 ```
 
-This will start a server on your machine. Go to your browser (I use google chrome) and go to the this url, http://localhost:3000/todos.json You will be able to see the json data. Ensure to use a JSON viewer extension on your browser.
+This will start a server on your machine. There is user authentication being used to view the data. Use the test_reqeusts.http file to login and copy the jwt response to the jwt variable. Then you can go through each action to create, read, update, and delete lists and tasks.
 
 # Minimum Viable Product
 
@@ -36,7 +36,7 @@ This will start a server on your machine. Go to your browser (I use google chrom
 
 # Future Features
 
-- Allow users to create task lists
+- Allow users to create task lists (In progress)
 - Allow users to prioritize tasks
 - Allow users to categorize tasks
 - Allow users to set due dates and get notifications
