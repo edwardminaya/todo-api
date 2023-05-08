@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # LISTS
+  get "/lists" => "lists#index"
+
   # TODOS
   get "/todos" => "todos#index"
   post "/todos" => "todos#create"

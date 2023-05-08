@@ -1,6 +1,10 @@
 ### Add jwt to login and remove jwt to logout
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM2NTgwMjV9.kNgJ3jqZX4uLz_d8wYeyLXmEn9MzfyXNJk2pyPcudqs
 
+###LIST INDEX
+GET http://localhost:3000/lists.json
+Authorization: Bearer {{jwt}}
+
 ###TODO INDEX
 GET http://localhost:3000/todos.json
 Authorization: Bearer {{jwt}}
