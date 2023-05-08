@@ -1,5 +1,5 @@
 ### Add jwt to login and remove jwt to logout
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM2NTQxODB9.ioxcyS9IiEMxSEsoZFnnK3vLzVtzPLERHy7DsqDcg7I
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM2NTgwMjV9.kNgJ3jqZX4uLz_d8wYeyLXmEn9MzfyXNJk2pyPcudqs
 
 ###TODO INDEX
 GET http://localhost:3000/todos.json
@@ -11,7 +11,10 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "title": "todo test"
+  "title": "todo test",
+  "details": "detail test",
+  "due_date": "whenever",
+  "list_id": 1
 }
 
 ###TODO SHOW

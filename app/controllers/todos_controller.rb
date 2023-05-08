@@ -14,6 +14,9 @@ class TodosController < ApplicationController
         title: params[:title],
         done: false,
         user_id: current_user.id,
+        details: params[:details],
+        due_date: params[:due_date],
+        list_id: params[:list_id],
       )
       render :show
     else
@@ -31,6 +34,9 @@ class TodosController < ApplicationController
     @todo.update(
       title: params[:title] || @todo.title,
       done: params[:done] || @todo.done,
+      details: params[:details] || @todo.details,
+      due_date: params[:due_date] || @todo.due_date,
+      list_id: params[:list_id] || @todo.list_id,
     )
     render :show
   end
