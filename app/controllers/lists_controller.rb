@@ -1,7 +1,6 @@
 class ListsController < ApplicationController
   def index
     if current_user
-      # Find way to get tasks that have done attribute set to false
       @lists = List.where(user_id: current_user)
       render :index
     else
