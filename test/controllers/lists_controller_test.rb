@@ -23,4 +23,12 @@ class ListsControllerTest < ActionDispatch::IntegrationTest
       assert_response 200
     end
   end
+
+  test "show" do
+    get "/lists/#{List.first.id}.json"
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal ["id", "list_name", "created_at", "updated_at", "user_id", "todos"], data.keys
+  end
 end

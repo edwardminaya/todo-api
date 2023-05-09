@@ -20,4 +20,9 @@ class ListsController < ApplicationController
       render json: { message: "Must be logged in to create list" }
     end
   end
+
+  def show
+    @list = List.find_by(id: params[:id])
+    render :show
+  end
 end

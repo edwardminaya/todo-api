@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ### ADD JWT BELOW TO LOGIN. TO LOGOUT REMOVE JWT TOKEN
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM2NjQxNTV9.r3LmYf8SySW5e8cM8eV-siHLFfEjBCFMc8sUgMl8FNM
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM3MzUxMDZ9.Gyv3WBYNjmPWqxleTdpVoRPCuIdKIqvjPOmzqqBcQ-k
 
 ###LIST INDEX
 GET http://localhost:3000/lists.json
@@ -33,6 +33,9 @@ Content-Type: application/json
 {
   "list_name": "test list"
 }
+
+###LIST SHOW
+GET http://localhost:3000/lists/1.json
 
 ###TODO INDEX
 GET http://localhost:3000/todos.json
