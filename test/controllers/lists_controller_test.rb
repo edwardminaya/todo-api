@@ -34,10 +34,17 @@ class ListsControllerTest < ActionDispatch::IntegrationTest
 
   test "update" do
     list = List.first
-    patch "/lists/#{list.id}.json", params: { list_name: "update name"}
+    patch "/lists/#{list.id}.json", params: { list_name: "update name" }
     assert_response 200
 
     data = JSON.parse(response.body)
     assert_equal "update name", data["list_name"]
+  end
+
+  test "destroy" do
+    assert_difference "List.count", -1 do
+      delete "/lists/#{List.first.id}.json"
+      assert_response 200
+    end
   end
 end

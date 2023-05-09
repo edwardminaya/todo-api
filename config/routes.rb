@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post "/lists" => "lists#create"
   get "/lists/:id" => "lists#show"
   patch "/lists/:id" => "lists#update"
+  delete "/lists/:id" => "lists#destroy"
 
   # TODOS
   get "/todos" => "todos#index"

@@ -33,4 +33,10 @@ class ListsController < ApplicationController
     )
     render :show
   end
+
+  def destroy
+    @list = List.find_by(id: params[:id])
+    @list.destroy
+    render json: { message: "List destroyed successfully" }
+  end
 end

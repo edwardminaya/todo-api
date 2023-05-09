@@ -46,6 +46,10 @@ Content-Type: application/json
   "list_name": "update name"
 }
 
+###LIST DESTROY
+DELETE http://localhost:3000/lists/1.json
+Authorization: Bearer {{jwt}}
+
 ###TODO INDEX
 GET http://localhost:3000/todos.json
 Authorization: Bearer {{jwt}}
