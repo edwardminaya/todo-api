@@ -25,4 +25,12 @@ class ListsController < ApplicationController
     @list = List.find_by(id: params[:id])
     render :show
   end
+
+  def update
+    @list = List.find_by(id: params[:id])
+    @list.update(
+      list_name: params[:list_name] || @list.list_name,
+    )
+    render :show
+  end
 end

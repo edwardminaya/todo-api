@@ -31,4 +31,13 @@ class ListsControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal ["id", "list_name", "created_at", "updated_at", "user_id", "todos"], data.keys
   end
+
+  test "update" do
+    list = List.first
+    patch "/lists/#{list.id}.json", params: { list_name: "update name"}
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "update name", data["list_name"]
+  end
 end

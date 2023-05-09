@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/lists" => "lists#index"
   post "/lists" => "lists#create"
   get "/lists/:id" => "lists#show"
+  patch "/lists/:id" => "lists#update"
 
   # TODOS
   get "/todos" => "todos#index"

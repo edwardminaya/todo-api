@@ -37,6 +37,15 @@ Content-Type: application/json
 ###LIST SHOW
 GET http://localhost:3000/lists/1.json
 
+###LIST UPDATE
+PATCH http://localhost:3000/lists/1.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "list_name": "update name"
+}
+
 ###TODO INDEX
 GET http://localhost:3000/todos.json
 Authorization: Bearer {{jwt}}
