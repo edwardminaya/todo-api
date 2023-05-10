@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
   def index
     if current_user
-      @todos = Todo.where(user_id: current_user.id, done: false)
+      @todos = Todo.where(user_id: current_user.id, done: false, list_id: params[:list_id])
       render :index
     else
       render json: { message: "Must be logged in to see tasks" }

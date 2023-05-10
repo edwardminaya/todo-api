@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ### ADD JWT BELOW TO LOGIN. TO LOGOUT REMOVE JWT TOKEN
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM3MzUxMDZ9.Gyv3WBYNjmPWqxleTdpVoRPCuIdKIqvjPOmzqqBcQ-k
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM4MjQyNjJ9.ypRB79fVMdl9H2UFkr2whlraT01nmfI1anWZteCqQso
 
 ###LIST INDEX
 GET http://localhost:3000/lists.json
@@ -53,6 +53,11 @@ Authorization: Bearer {{jwt}}
 ###TODO INDEX
 GET http://localhost:3000/todos.json
 Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "list_id": 2
+}
 
 ###TODO CREATE
 POST http://localhost:3000/todos.json
