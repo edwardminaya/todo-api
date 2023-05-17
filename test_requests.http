@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ### ADD JWT BELOW TO LOGIN. TO LOGOUT REMOVE JWT TOKEN
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODQyNTUxNDF9.VnObXl21bCpNoUWoFD5k2HS20gd80ZcKzkVPvfVtQ9k
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODQ0MjgwNTR9.iSGbynqknEW-PGdZH9ZLaiLzKWtVv9br3q2xGSbSAXU
 
 ###LIST INDEX
 GET http://localhost:3000/lists.json
