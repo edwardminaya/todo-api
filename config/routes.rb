@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   # USER LGOIN
   post "/sessions" => "sessions#create"
+
+  root "welcome#index"
 end
